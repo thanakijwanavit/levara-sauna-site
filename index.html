@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levara Sauna Suite — Pool-View Dual Sauna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #1a1512;
+            --bg-warm: #2d2420;
+            --accent-copper: #c17f59;
+            --accent-gold: #d4a574;
+            --text-light: #f5f0eb;
+            --text-muted: #a89a8c;
+            --hinoki: #deb887;
+            --hinoki-dark: #c9a86c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: 
+                linear-gradient(180deg, rgba(26,21,18,0) 0%, rgba(26,21,18,0.8) 100%),
+                linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-warm) 50%, var(--bg-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(193,127,89,0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(212,165,116,0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-light) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent-copper);
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent-copper);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(180deg, rgba(26,21,18,0.95) 0%, transparent 100%);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-copper);
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-copper), transparent);
+            margin: 1.5rem auto;
+        }
+
+        /* Specs Grid */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .spec-card {
+            background: linear-gradient(145deg, var(--bg-warm) 0%, rgba(45,36,32,0.5) 100%);
+            border: 1px solid rgba(193,127,89,0.2);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(193,127,89,0.5);
+        }
+
+        .spec-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .spec-card ul {
+            list-style: none;
+        }
+
+        .spec-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(168,154,140,0.1);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .spec-card li:last-child {
+            border-bottom: none;
+        }
+
+        .spec-card li strong {
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        /* Rooms Section */
+        .rooms-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .room-card {
+            position: relative;
+            background: var(--bg-warm);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(193,127,89,0.15);
+        }
+
+        .room-visual {
+            height: 200px;
+            background: linear-gradient(135deg, var(--hinoki-dark) 0%, var(--hinoki) 50%, var(--hinoki-dark) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .room-visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 8px,
+                rgba(0,0,0,0.05) 8px,
+                rgba(0,0,0,0.05) 10px
+            );
+        }
+
+        .room-icon {
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .room-content {
+            padding: 2rem;
+        }
+
+        .room-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .room-temp {
+            display: inline-block;
+            background: rgba(193,127,89,0.2);
+            color: var(--accent-copper);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .room-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Materials */
+        .materials-showcase {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .material-sample {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            border-radius: 12px;
+            background: linear-gradient(145deg, var(--hinoki) 0%, var(--hinoki-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .material-sample::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 3px,
+                rgba(139,105,20,0.1) 3px,
+                rgba(139,105,20,0.1) 4px
+            );
+        }
+
+        .material-sample::after {
+            content: 'HINOKI';
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: rgba(26,21,18,0.5);
+            letter-spacing: 0.2em;
+        }
+
+        .material-details {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .material-details h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .material-details p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .material-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .feature::before {
+            content: '◆';
+            color: var(--accent-copper);
+            font-size: 0.5rem;
+        }
+
+        /* Floor Plan Preview */
+        .floorplan-container {
+            background: var(--bg-warm);
+            border-radius: 16px;
+            padding: 3rem;
+            border: 1px solid rgba(193,127,89,0.15);
+        }
+
+        .floorplan-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .floorplan-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 1rem;
+        }
+
+        .stat-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--accent-gold);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Glass Cost Section */
+        .cost-comparison {
+            background: linear-gradient(145deg, var(--bg-warm) 0%, rgba(45,36,32,0.5) 100%);
+            border: 1px solid rgba(193,127,89,0.2);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .cost-table th,
+        .cost-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(168,154,140,0.1);
+        }
+
+        .cost-table th {
+            color: var(--accent-copper);
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+        }
+
+        .cost-table td {
+            color: var(--text-muted);
+        }
+
+        .cost-table tr.recommended {
+            background: rgba(193,127,89,0.1);
+        }
+
+        .cost-table tr.recommended td {
+            color: var(--text-light);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent-copper);
+            color: var(--bg-dark);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-left: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-warm);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(193,127,89,0.1);
+        }
+
+        footer .logo {
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .materials-showcase {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LEVARA</div>
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#materials">Materials</a></li>
+            <li><a href="#specs">Specifications</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Levara Sauna</h1>
+            <p class="subtitle">Pool-View Dual Suite</p>
+            <p>A luxury three-room wellness retreat featuring traditional electric and infrared saunas with dramatic pool-view floor glazing, crafted in authentic Japanese Hinoki wood.</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Explore</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </header>
+
+    <section id="overview">
+        <div class="section-header">
+            <h2>Project Overview</h2>
+            <div class="divider"></div>
+            <p>A meticulously designed sauna suite within a compact footprint, maximizing wellness experience and visual connection to the outdoors.</p>
+        </div>
+
+        <div class="floorplan-container">
+            <img src="floor-plans/IMG_0267.jpg" alt="Floor Plan Render" class="floorplan-image" onerror="this.style.display='none'">
+            <div class="floorplan-stats">
+                <div class="stat">
+                    <div class="stat-value">13.6</div>
+                    <div class="stat-label">Square Meters</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Rooms</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">10</div>
+                    <div class="stat-label">Capacity</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Sauna Types</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms">
+        <div class="section-header">
+            <h2>The Suite</h2>
+            <div class="divider"></div>
+            <p>Three interconnected spaces designed for the complete thermal wellness journey.</p>
+        </div>
+
+        <div class="rooms-container">
+            <div class="room-card">
+                <div class="room-visual">
+                    <span class="room-icon">🔥</span>
+                </div>
+                <div class="room-content">
+                    <h3>Electric Sauna</h3>
+                    <span class="room-temp">75–90°C</span>
+                    <p>Traditional high-temperature sauna with cylindrical tower heater and volcanic stones. L-shaped tiered benches with optional upper tier for maximum capacity.</p>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-visual" style="background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #8b4513 100%);">
+                    <span class="room-icon">☀️</span>
+                </div>
+                <div class="room-content">
+                    <h3>Infrared Sauna</h3>
+                    <span class="room-temp">45–60°C</span>
+                    <p>Gentle radiant heat from carbon/ceramic panels. Lower temperature allows longer sessions with deep tissue penetration benefits.</p>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-visual" style="background: linear-gradient(135deg, #4a90a4 0%, #5ba3b8 50%, #4a90a4 100%);">
+                    <span class="room-icon">❄️</span>
+                </div>
+                <div class="room-content">
+                    <h3>Vestibule</h3>
+                    <span class="room-temp">Ambient</span>
+                    <p>Cool-down and transition space with full 3.5m ceiling height. Houses controls for both saunas and provides the dramatic pool-view experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="materials">
+        <div class="section-header">
+            <h2>Hinoki Craftsmanship</h2>
+            <div class="divider"></div>
+            <p>Authentic Japanese cypress with natural antimicrobial properties and aromatic essence.</p>
+        </div>
+
+        <div class="materials-showcase">
+            <div class="material-sample"></div>
+            <div class="material-details">
+                <h3>Japanese Hinoki</h3>
+                <p>Selected for its natural resistance to moisture and decay, Hinoki (Chamaecyparis obtusa) releases a calming citrus-like fragrance when heated, enhancing the sauna experience.</p>
+                <div class="material-features">
+                    <div class="feature">Antimicrobial</div>
+                    <div class="feature">Aromatic</div>
+                    <div class="feature">Moisture resistant</div>
+                    <div class="feature">12-15mm T&G</div>
+                    <div class="feature">Clear grade</div>
+                    <div class="feature">No varnish</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs">
+        <div class="section-header">
+            <h2>Technical Specifications</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h3>Dimensions</h3>
+                <ul>
+                    <li><strong>Envelope:</strong> 2.95m × 4.62m</li>
+                    <li><strong>Structural Height:</strong> 3.50m</li>
+                    <li><strong>Dropped Ceiling:</strong> 2.20-2.30m</li>
+                    <li><strong>Each Sauna:</strong> 1.90m × 2.31m</li>
+                    <li><strong>Vestibule:</strong> 1.05m × 4.62m</li>
+                </ul>
+            </div>
+
+            <div class="spec-card">
+                <h3>Heating Systems</h3>
+                <ul>
+                    <li><strong>Electric:</strong> 8-10 kW tower heater</li>
+                    <li><strong>Infrared:</strong> 2-3.5 kW panels</li>
+                    <li><strong>Heater Style:</strong> Harvia Cilindro type</li>
+                    <li><strong>Warm-up:</strong> ~45 minutes</li>
+                </ul>
+            </div>
+
+            <div class="spec-card">
+                <h3>Seating</h3>
+                <ul>
+                    <li><strong>Configuration:</strong> L-shaped benches</li>
+                    <li><strong>Seat Height:</strong> 450mm</li>
+                    <li><strong>Bench Depth:</strong> 500-550mm</li>
+                    <li><strong>Backrest Angle:</strong> 15-20°</li>
+                    <li><strong>Capacity:</strong> 8 comfortable / 10 max</li>
+                </ul>
+            </div>
+
+            <div class="spec-card">
+                <h3>Wall Assembly</h3>
+                <ul>
+                    <li><strong>1.</strong> Hinoki T&G cladding</li>
+                    <li><strong>2.</strong> Air gap (battens)</li>
+                    <li><strong>3.</strong> Aluminum vapor barrier</li>
+                    <li><strong>4.</strong> 100mm mineral wool</li>
+                    <li><strong>5.</strong> Structural wall</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cost-comparison">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 0.5rem;">Floor Glazing Cost Analysis</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">10 sqm total (2 × 5 sqm panels) — Thailand market pricing</p>
+            
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>Glass Type</th>
+                        <th>Per sqm</th>
+                        <th>Total (10 sqm)</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="recommended">
+                        <td>Air-filled IGU <span class="badge">Recommended</span></td>
+                        <td>฿4,000–5,000</td>
+                        <td>฿40,000–50,000</td>
+                        <td>Floor-rated laminated</td>
+                    </tr>
+                    <tr>
+                        <td>Argon-filled IGU</td>
+                        <td>฿5,000–7,000</td>
+                        <td>฿50,000–70,000</td>
+                        <td>Optional upgrade</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">LEVARA SAUNA</div>
+        <p>Pool-View Dual Sauna Suite — Design Documentation</p>
+        <p style="margin-top: 1rem; opacity: 0.6;">© 2025 Levara Project</p>
+    </footer>
+</body>
+</html>
+
