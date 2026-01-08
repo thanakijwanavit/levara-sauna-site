@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700">
+  <defs>
+    <style>
+      .floor-vest { fill: #9ca3af; }
+      .floor-sauna { fill: #d1d5db; }
+      .floor-top { fill: #e5e7eb; }
+      .wall-ext { fill: #f3f4f6; stroke: #9ca3af; stroke-width: 1; }
+      .wall-int { fill: #fef3c7; stroke: #92400e; stroke-width: 1; }
+      .wall-hinoki { fill: #deb887; stroke: #92400e; stroke-width: 0.5; }
+      .ceiling-dropped { fill: #f5deb3; stroke: #92400e; stroke-width: 1; }
+      .ceiling-full { fill: #e5e7eb; stroke: #9ca3af; stroke-width: 1; }
+      .window { fill: #60a5fa; fill-opacity: 0.4; stroke: #2563eb; stroke-width: 2; }
+      .door { fill: #93c5fd; fill-opacity: 0.5; stroke: #2563eb; stroke-width: 1.5; }
+      .bench { fill: #c9a86c; stroke: #8b6914; stroke-width: 1; }
+      .heater { fill: #dc2626; stroke: #991b1b; stroke-width: 1; }
+      .ir-panel { fill: #1f2937; stroke: #f97316; stroke-width: 2; }
+      .pool { fill: #0ea5e9; fill-opacity: 0.6; }
+      .pool-edge { fill: #e5e7eb; stroke: #9ca3af; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1f2937; }
+      .sublabel { font-family: Arial, sans-serif; font-size: 11px; fill: #6b7280; }
+      .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #111827; }
+      .shadow { fill: rgba(0,0,0,0.1); }
+    </style>
+    <!-- Isometric grid helpers - 30° angles -->
+    <linearGradient id="poolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:0.6" />
+    </linearGradient>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#deb887" />
+      <stop offset="100%" style="stop-color:#c9a86c" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">POOL-VIEW DUAL SAUNA SUITE — Isometric Concept</text>
+  <text x="450" y="55" text-anchor="middle" class="sublabel">Hinoki Interior | 3 Rooms | Pool Connection | DRAFT</text>
+  
+  <!-- Isometric view - origin at center-bottom, looking NW -->
+  <g transform="translate(450, 550)">
+    
+    <!-- POOL (outside, to the left) -->
+    <polygon points="-350,50 -350,-30 -200,-117 -200,50" fill="url(#poolGrad)"/>
+    <polygon points="-350,-30 -200,-117 -200,-100 -350,-13" class="pool-edge"/>
+    <text x="-275" y="-40" text-anchor="middle" class="label" style="fill:#0369a1">POOL</text>
+    
+    <!-- Ground/context shadow -->
+    <polygon points="-200,120 -200,50 280,50 280,120" class="shadow"/>
+    
+    <!-- === MAIN ENVELOPE === -->
+    <!-- Floor slab -->
+    <polygon points="-180,50 -180,-70 200,-70 200,50" class="floor-vest"/>
+    
+    <!-- Left exterior wall (pool-facing with window) -->
+    <polygon points="-180,50 -180,-70 -180,-320 -180,-200" class="wall-ext"/>
+    <!-- Window cutout visualization -->
+    <polygon points="-180,-50 -180,-250 -180,-250 -180,-50" class="window"/>
+    
+    <!-- Back wall -->
+    <polygon points="-180,-70 200,-70 200,-320 -180,-320" class="wall-ext"/>
+    
+    <!-- Right wall -->
+    <polygon points="200,50 200,-70 200,-320 200,-200" class="wall-ext"/>
+    
+    <!-- Front wall (partial, with entry) -->
+    <polygon points="-180,50 -100,50 -100,-200 -180,-200" class="wall-ext"/>
+    <polygon points="100,50 200,50 200,-200 100,-200" class="wall-ext"/>
+    
+    <!-- === VESTIBULE === -->
+    <!-- Vestibule floor (differentiated) -->
+    <polygon points="-170,40 -170,-60 -80,-60 -80,40" fill="#d1d5db"/>
+    
+    <!-- Pool-view window (large, on left wall) -->
+    <polygon points="-175,-40 -175,-180 -175,-180 -175,-40" class="window" stroke-width="3"/>
+    <text x="-185" y="-110" text-anchor="end" class="sublabel" transform="rotate(-90, -185, -110)">POOL VIEW</text>
+    
+    <!-- Vestibule full-height ceiling indication -->
+    <line x1="-170" y1="-300" x2="-80" y2="-300" stroke="#9ca3af" stroke-width="1" stroke-dasharray="5,3"/>
+    <text x="-125" y="-310" text-anchor="middle" class="sublabel" style="font-size:9px">3.5m ceiling</text>
+    
+    <!-- Partition wall: Vestibule | Saunas -->
+    <polygon points="-80,40 -80,-60 -80,-195 -80,-195" class="wall-int"/>
+    
+    <!-- Door D1: Vestibule → IR Sauna -->
+    <polygon points="-80,-10 -80,-70 -80,-70 -80,-10" class="door"/>
+    <text x="-85" y="-40" text-anchor="end" class="sublabel" style="font-size:9px">D1</text>
+    
+    <!-- Door D2: Vestibule → Electric Sauna -->
+    <polygon points="-80,30 -80,-5 -80,-5 -80,30" class="door"/>
+    <text x="-85" y="12" text-anchor="end" class="sublabel" style="font-size:9px">D2</text>
+    
+    <!-- Vestibule label -->
+    <text x="-125" y="0" text-anchor="middle" class="label">VESTIBULE</text>
+    <text x="-125" y="15" text-anchor="middle" class="sublabel">Cool-down</text>
+    
+    <!-- === INFRARED SAUNA (back/top in view) === -->
+    <!-- IR Sauna floor -->
+    <polygon points="-70,-60 -70,-145 190,-145 190,-60" class="floor-sauna"/>
+    
+    <!-- Dropped ceiling -->
+    <polygon points="-70,-60 -70,-145 190,-145 190,-60" class="ceiling-dropped" transform="translate(0, -195)"/>
+    <text x="60" y="-270" text-anchor="middle" class="sublabel" style="font-size:9px">Dropped ceiling 2.25m</text>
+    
+    <!-- Hinoki wall cladding (back wall visible) -->
+    <polygon points="-70,-145 190,-145 190,-255 -70,-255" fill="url(#woodGrad)" stroke="#92400e"/>
+    
+    <!-- IR Panels on back wall -->
+    <rect x="-50" y="-240" width="60" height="80" class="ir-panel" rx="2"/>
+    <rect x="30" y="-240" width="60" height="80" class="ir-panel" rx="2"/>
+    <rect x="110" y="-240" width="60" height="80" class="ir-panel" rx="2"/>
+    <text x="60" y="-180" text-anchor="middle" class="sublabel" style="fill:#f97316;font-size:10px">IR PANELS</text>
+    
+    <!-- L-shaped bench -->
+    <polygon points="-60,-65 -60,-135 170,-135 170,-110 -35,-110 -35,-65" class="bench"/>
+    
+    <!-- Door D3: Connecting door to Electric Sauna -->
+    <polygon points="20,-60 80,-60 80,-60 20,-60" class="door" stroke-width="2"/>
+    <text x="50" y="-50" text-anchor="middle" class="sublabel" style="font-size:9px">D3 Connecting</text>
+    
+    <!-- IR Sauna label -->
+    <text x="60" y="-90" text-anchor="middle" class="label" style="fill:#ea580c">INFRARED</text>
+    <text x="60" y="-75" text-anchor="middle" class="sublabel">45-60°C</text>
+    
+    <!-- Partition between saunas -->
+    <polygon points="-70,-55 190,-55 190,-60 -70,-60" class="wall-int"/>
+    
+    <!-- === ELECTRIC SAUNA (front in view) === -->
+    <!-- Electric Sauna floor -->
+    <polygon points="-70,40 -70,-50 190,-50 190,40" class="floor-sauna"/>
+    
+    <!-- Dropped ceiling -->
+    <polygon points="-70,40 -70,-50 190,-50 190,40" class="ceiling-dropped" transform="translate(0, -195)"/>
+    
+    <!-- Hinoki wall cladding (side wall visible) -->
+    <polygon points="190,-50 190,40 190,-155 190,-50" fill="url(#woodGrad)" stroke="#92400e"/>
+    
+    <!-- L-shaped bench -->
+    <polygon points="-60,35 -60,-40 170,-40 170,-15 -35,-15 -35,35" class="bench"/>
+    
+    <!-- Electric heater -->
+    <rect x="-55" y="-35" width="35" height="45" class="heater" rx="3"/>
+    <ellipse cx="-45" cy="-30" rx="8" ry="5" fill="#6b7280"/>
+    <ellipse cx="-32" cy="-28" rx="6" ry="4" fill="#6b7280"/>
+    <text x="-38" y="20" text-anchor="middle" class="sublabel" style="font-size:8px">Heater</text>
+    <text x="-38" y="30" text-anchor="middle" class="sublabel" style="font-size:8px">8-10kW</text>
+    
+    <!-- Electric Sauna label -->
+    <text x="60" y="5" text-anchor="middle" class="label" style="fill:#dc2626">ELECTRIC</text>
+    <text x="60" y="20" text-anchor="middle" class="sublabel">75-90°C</text>
+    
+  </g>
+  
+  <!-- Dimension callouts -->
+  <g transform="translate(100, 620)">
+    <text x="0" y="0" class="label" style="font-size:12px">KEY DIMENSIONS</text>
+    <text x="0" y="18" class="sublabel">• Overall: 2.95m × 4.62m × 3.50m (structural height)</text>
+    <text x="0" y="33" class="sublabel">• Dropped sauna ceilings: 2.20-2.30m</text>
+    <text x="0" y="48" class="sublabel">• Vestibule: 1.05m × 4.62m (full height)</text>
+    <text x="350" y="18" class="sublabel">• Each sauna: 1.90m × 2.31m</text>
+    <text x="350" y="33" class="sublabel">• Total capacity: 10 people (8 comfortable)</text>
+    <text x="350" y="48" class="sublabel">• All 3 sauna doors swing outward</text>
+  </g>
+  
+  <!-- Materials legend -->
+  <g transform="translate(700, 100)">
+    <text x="0" y="0" class="label" style="font-size:12px">MATERIALS</text>
+    <rect x="0" y="10" width="20" height="12" fill="#deb887" stroke="#92400e"/>
+    <text x="25" y="20" class="sublabel">Hinoki cladding</text>
+    <rect x="0" y="28" width="20" height="12" fill="#c9a86c" stroke="#8b6914"/>
+    <text x="25" y="38" class="sublabel">Hinoki benches</text>
+    <rect x="0" y="46" width="20" height="12" class="ir-panel"/>
+    <text x="25" y="56" class="sublabel">IR panels</text>
+    <rect x="0" y="64" width="20" height="12" class="heater"/>
+    <text x="25" y="74" class="sublabel">Electric heater</text>
+    <rect x="0" y="82" width="20" height="12" class="window"/>
+    <text x="25" y="92" class="sublabel">Glass/window</text>
+  </g>
+  
+</svg>
+

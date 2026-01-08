@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      .wall { fill: none; stroke: #1a1a1a; stroke-width: 8; }
+      .partition { fill: none; stroke: #1a1a1a; stroke-width: 6; }
+      .door { fill: none; stroke: #2563eb; stroke-width: 3; }
+      .door-swing { fill: none; stroke: #2563eb; stroke-width: 1; stroke-dasharray: 4,2; }
+      .window { fill: #bfdbfe; stroke: #2563eb; stroke-width: 3; }
+      .bench { fill: #d4a574; stroke: #8b6914; stroke-width: 2; }
+      .heater { fill: #ef4444; stroke: #991b1b; stroke-width: 2; }
+      .ir-panel { fill: #f97316; stroke: #c2410c; stroke-width: 2; }
+      .duckboard { fill: #e8d5b7; stroke: #a3865a; stroke-width: 1; }
+      .dimension { font-family: Arial, sans-serif; font-size: 11px; fill: #374151; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1f2937; }
+      .sublabel { font-family: Arial, sans-serif; font-size: 10px; fill: #6b7280; }
+      .dim-line { stroke: #6b7280; stroke-width: 1; }
+      .dim-arrow { fill: #6b7280; }
+      .grid { stroke: #e5e7eb; stroke-width: 0.5; }
+      .north { fill: #1f2937; }
+    </style>
+    <!-- Arrow marker for dimensions -->
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="0" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" class="dim-arrow"/>
+    </marker>
+    <marker id="arrow-rev" markerWidth="8" markerHeight="8" refX="8" refY="3" orient="auto">
+      <path d="M8,0 L8,6 L0,3 z" class="dim-arrow"/>
+    </marker>
+  </defs>
+  
+  <!-- Title block -->
+  <rect x="10" y="10" width="780" height="50" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="32" text-anchor="middle" class="label" style="font-size: 16px;">POOL-VIEW DUAL SAUNA SUITE — FLOOR PLAN</text>
+  <text x="400" y="48" text-anchor="middle" class="sublabel">Scale: 1:25 (approx) | All dimensions in mm | DRAFT v1.0</text>
+  
+  <!-- North arrow -->
+  <g transform="translate(720, 100)">
+    <polygon points="0,-25 -8,5 0,-5 8,5" class="north"/>
+    <text x="0" y="20" text-anchor="middle" class="dimension">N</text>
+    <text x="0" y="32" text-anchor="middle" class="sublabel">POOL →</text>
+  </g>
+
+  <!-- Main envelope - offset for drawing area -->
+  <g transform="translate(100, 120)">
+    
+    <!-- Outer walls -->
+    <rect x="0" y="0" width="462" height="295" class="wall"/>
+    
+    <!-- Partition: Vestibule to Sauna band (vertical line at x=105) -->
+    <line x1="105" y1="0" x2="105" y2="295" class="partition"/>
+    
+    <!-- Partition: Between saunas (horizontal line at y=147.5) -->
+    <line x1="105" y1="147" x2="462" y2="147" class="partition"/>
+    
+    <!-- Pool-facing window in vestibule (long wall, left side) -->
+    <rect x="-4" y="40" width="8" height="215" class="window"/>
+    
+    <!-- VESTIBULE (left strip) -->
+    <text x="52" y="150" text-anchor="middle" class="label">VESTIBULE</text>
+    <text x="52" y="165" text-anchor="middle" class="sublabel">Cool-down</text>
+    <text x="52" y="180" text-anchor="middle" class="sublabel">1050 × 4620</text>
+    
+    <!-- Door D4: Entry (bottom of vestibule) -->
+    <line x1="30" y1="295" x2="110" y2="295" class="door" stroke-width="6" stroke="#bfdbfe"/>
+    <path d="M 30 295 A 80 80 0 0 1 30 375" class="door-swing" transform="rotate(180, 70, 295)"/>
+    <text x="70" y="285" text-anchor="middle" class="sublabel">D4 Entry</text>
+    
+    <!-- INFRARED SAUNA (top right) -->
+    <text x="283" y="60" text-anchor="middle" class="label">INFRARED SAUNA</text>
+    <text x="283" y="75" text-anchor="middle" class="sublabel">45-60°C</text>
+    <text x="283" y="90" text-anchor="middle" class="sublabel">1900 × 2310</text>
+    
+    <!-- IR Sauna benches (L-shaped) -->
+    <rect x="115" y="10" width="337" height="55" class="bench"/><!-- Back bench -->
+    <rect x="397" y="10" width="55" height="127" class="bench"/><!-- Side bench -->
+    
+    <!-- IR Panels (on walls) -->
+    <rect x="120" y="5" width="120" height="8" class="ir-panel"/>
+    <rect x="260" y="5" width="120" height="8" class="ir-panel"/>
+    <text x="200" y="25" text-anchor="middle" class="sublabel" style="font-size:8px">IR PANELS</text>
+    
+    <!-- Duckboard indication -->
+    <rect x="120" y="75" width="270" height="60" class="duckboard" rx="2"/>
+    <text x="255" y="110" text-anchor="middle" class="sublabel" style="font-size:8px">DUCKBOARDS</text>
+    
+    <!-- Door D1: Vestibule to IR Sauna -->
+    <line x1="105" y1="50" x2="105" y2="130" class="door" stroke-width="6" stroke="#bfdbfe"/>
+    <path d="M 105 50 A 80 80 0 0 0 25 50" class="door-swing"/>
+    <text x="85" y="95" text-anchor="middle" class="sublabel" style="font-size:9px">D1</text>
+    
+    <!-- ELECTRIC SAUNA (bottom right) -->
+    <text x="283" y="210" text-anchor="middle" class="label">ELECTRIC SAUNA</text>
+    <text x="283" y="225" text-anchor="middle" class="sublabel">75-90°C</text>
+    <text x="283" y="240" text-anchor="middle" class="sublabel">1900 × 2310</text>
+    
+    <!-- Electric Sauna benches (L-shaped) -->
+    <rect x="115" y="230" width="337" height="55" class="bench"/><!-- Back bench -->
+    <rect x="397" y="158" width="55" height="127" class="bench"/><!-- Side bench -->
+    
+    <!-- Electric Heater -->
+    <rect x="120" y="160" width="40" height="50" class="heater" rx="3"/>
+    <text x="140" y="190" text-anchor="middle" class="sublabel" style="font-size:8px;fill:white">HTR</text>
+    
+    <!-- Duckboard indication -->
+    <rect x="170" y="165" width="220" height="55" class="duckboard" rx="2"/>
+    
+    <!-- Door D2: Vestibule to Electric Sauna -->
+    <line x1="105" y1="165" x2="105" y2="245" class="door" stroke-width="6" stroke="#bfdbfe"/>
+    <path d="M 105 245 A 80 80 0 0 1 25 245" class="door-swing"/>
+    <text x="85" y="210" text-anchor="middle" class="sublabel" style="font-size:9px">D2</text>
+    
+    <!-- Door D3: Connecting door between saunas -->
+    <line x1="220" y1="147" x2="300" y2="147" class="door" stroke-width="6" stroke="#bfdbfe"/>
+    <path d="M 220 147 A 80 80 0 0 1 220 67" class="door-swing"/>
+    <text x="260" y="140" text-anchor="middle" class="sublabel" style="font-size:9px">D3</text>
+    
+    <!-- Ventilation indicators -->
+    <circle cx="130" cy="175" r="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <text x="130" y="178" text-anchor="middle" style="font-size:8px;fill:#22c55e">S</text>
+    <circle cx="445" cy="260" r="8" fill="none" stroke="#ef4444" stroke-width="2"/>
+    <text x="445" y="263" text-anchor="middle" style="font-size:8px;fill:#ef4444">E</text>
+    
+    <circle cx="130" cy="25" r="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <text x="130" y="28" text-anchor="middle" style="font-size:8px;fill:#22c55e">S</text>
+    <circle cx="445" cy="120" r="8" fill="none" stroke="#ef4444" stroke-width="2"/>
+    <text x="445" y="123" text-anchor="middle" style="font-size:8px;fill:#ef4444">E</text>
+    
+    <!-- DIMENSIONS -->
+    <!-- Overall width -->
+    <line x1="0" y1="330" x2="462" y2="330" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="231" y="345" text-anchor="middle" class="dimension">4620</text>
+    
+    <!-- Overall height -->
+    <line x1="500" y1="0" x2="500" y2="295" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="520" y="150" text-anchor="middle" class="dimension" transform="rotate(90, 520, 150)">2950</text>
+    
+    <!-- Vestibule width -->
+    <line x1="0" y1="-20" x2="105" y2="-20" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="52" y="-25" text-anchor="middle" class="dimension">1050</text>
+    
+    <!-- Sauna band width -->
+    <line x1="105" y1="-20" x2="462" y2="-20" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="283" y="-25" text-anchor="middle" class="dimension">1900*</text>
+    
+    <!-- Sauna lengths -->
+    <line x1="545" y1="0" x2="545" y2="147" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="560" y="75" text-anchor="middle" class="dimension" transform="rotate(90, 560, 75)">2310</text>
+    
+    <line x1="545" y1="147" x2="545" y2="295" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="560" y="220" text-anchor="middle" class="dimension" transform="rotate(90, 560, 220)">2310</text>
+    
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(580, 450)">
+    <text x="0" y="0" class="label" style="font-size:12px">LEGEND</text>
+    <rect x="0" y="10" width="20" height="12" class="bench"/>
+    <text x="25" y="20" class="sublabel">Benches</text>
+    <rect x="0" y="28" width="20" height="12" class="heater"/>
+    <text x="25" y="38" class="sublabel">Electric Heater</text>
+    <rect x="0" y="46" width="20" height="12" class="ir-panel"/>
+    <text x="25" y="56" class="sublabel">IR Panels</text>
+    <rect x="0" y="64" width="20" height="12" class="window"/>
+    <text x="25" y="74" class="sublabel">Window/Glass</text>
+    <rect x="0" y="82" width="20" height="12" class="duckboard"/>
+    <text x="25" y="92" class="sublabel">Duckboards</text>
+    <circle cx="10" cy="110" r="6" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <text x="25" y="113" class="sublabel">Supply Vent</text>
+    <circle cx="10" cy="128" r="6" fill="none" stroke="#ef4444" stroke-width="2"/>
+    <text x="25" y="131" class="sublabel">Exhaust Vent</text>
+  </g>
+  
+  <!-- Notes -->
+  <g transform="translate(100, 480)">
+    <text x="0" y="0" class="label" style="font-size:11px">NOTES:</text>
+    <text x="0" y="15" class="sublabel">1. All doors swing outward (safety requirement)</text>
+    <text x="0" y="28" class="sublabel">2. *Sauna width is net clear; adjust for partition thickness</text>
+    <text x="0" y="41" class="sublabel">3. D3 swing direction TBD based on final heater position</text>
+    <text x="0" y="54" class="sublabel">4. Bench depth: 500-550mm | Seat height: 450mm</text>
+    <text x="0" y="67" class="sublabel">5. Pool-facing window spans vestibule long wall</text>
+  </g>
+  
+</svg>
+

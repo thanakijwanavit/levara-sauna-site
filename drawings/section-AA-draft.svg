@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <style>
+      .structure { fill: #e5e7eb; stroke: #374151; stroke-width: 2; }
+      .insulation { fill: url(#insulation-pattern); stroke: #9ca3af; stroke-width: 1; }
+      .vapor-barrier { stroke: #3b82f6; stroke-width: 2; stroke-dasharray: 8,3; }
+      .cladding { fill: #d4a574; stroke: #92400e; stroke-width: 1; }
+      .dropped-ceiling { fill: #fef3c7; stroke: #92400e; stroke-width: 2; }
+      .service-void { fill: #f3f4f6; stroke: #9ca3af; stroke-width: 1; stroke-dasharray: 4,2; }
+      .floor { fill: #d1d5db; stroke: #374151; stroke-width: 2; }
+      .bench { fill: #d4a574; stroke: #92400e; stroke-width: 2; }
+      .heater { fill: #ef4444; stroke: #991b1b; stroke-width: 2; }
+      .person { fill: none; stroke: #6b7280; stroke-width: 1.5; }
+      .dimension { font-family: Arial, sans-serif; font-size: 11px; fill: #374151; }
+      .label { font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #1f2937; }
+      .sublabel { font-family: Arial, sans-serif; font-size: 10px; fill: #6b7280; }
+      .dim-line { stroke: #6b7280; stroke-width: 1; }
+      .cut-line { stroke: #ef4444; stroke-width: 2; stroke-dasharray: 15,5; }
+      .vent { fill: #22c55e; stroke: #166534; stroke-width: 1; }
+    </style>
+    <pattern id="insulation-pattern" patternUnits="userSpaceOnUse" width="8" height="8">
+      <path d="M0,4 Q2,0 4,4 T8,4" fill="none" stroke="#d1d5db" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="0" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6b7280"/>
+    </marker>
+    <marker id="arrow-rev" markerWidth="8" markerHeight="8" refX="8" refY="3" orient="auto">
+      <path d="M8,0 L8,6 L0,3 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  
+  <!-- Title block -->
+  <rect x="10" y="10" width="780" height="50" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="32" text-anchor="middle" class="label" style="font-size: 16px;">SECTION A-A: THROUGH ELECTRIC SAUNA</text>
+  <text x="400" y="48" text-anchor="middle" class="sublabel">Looking toward pool | Scale: 1:25 (approx) | DRAFT v1.0</text>
+  
+  <g transform="translate(80, 90)">
+    
+    <!-- Floor slab -->
+    <rect x="0" y="350" width="640" height="30" class="floor"/>
+    <text x="320" y="370" text-anchor="middle" class="sublabel">FLOOR SLAB</text>
+    
+    <!-- Left structural wall -->
+    <rect x="0" y="0" width="20" height="350" class="structure"/>
+    
+    <!-- Right structural wall -->
+    <rect x="620" y="0" width="20" height="350" class="structure"/>
+    
+    <!-- Ceiling slab (structural 3.5m) -->
+    <rect x="0" y="-30" width="640" height="30" class="structure"/>
+    <text x="320" y="-10" text-anchor="middle" class="sublabel">STRUCTURAL CEILING @ 3500mm</text>
+    
+    <!-- VESTIBULE (left portion) -->
+    <rect x="20" y="0" width="105" height="350" fill="#fafafa"/>
+    <text x="72" y="180" text-anchor="middle" class="label" transform="rotate(-90, 72, 180)">VESTIBULE</text>
+    <text x="72" y="330" text-anchor="middle" class="sublabel">Full height</text>
+    <text x="72" y="342" text-anchor="middle" class="sublabel">3500mm</text>
+    
+    <!-- Pool-facing window (in vestibule wall) -->
+    <rect x="-5" y="50" width="30" height="250" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+    <text x="10" y="40" text-anchor="middle" class="sublabel" style="font-size:9px">POOL</text>
+    <text x="10" y="320" text-anchor="middle" class="sublabel" style="font-size:9px">WINDOW</text>
+    
+    <!-- Partition vestibule/sauna -->
+    <rect x="125" y="0" width="15" height="350" class="structure"/>
+    
+    <!-- ELECTRIC SAUNA -->
+    <!-- Insulation layer -->
+    <rect x="140" y="0" width="100" height="220" class="insulation"/>
+    <rect x="500" y="0" width="100" height="220" class="insulation"/>
+    <rect x="140" y="-30" width="460" height="30" class="insulation"/>
+    
+    <!-- Vapor barrier indication -->
+    <line x1="155" y1="0" x2="155" y2="220" class="vapor-barrier"/>
+    <line x1="585" y1="0" x2="585" y2="220" class="vapor-barrier"/>
+    <line x1="155" y1="0" x2="585" y2="0" class="vapor-barrier"/>
+    
+    <!-- Service void above dropped ceiling -->
+    <rect x="160" y="5" width="420" height="115" class="service-void"/>
+    <text x="370" y="65" text-anchor="middle" class="sublabel">SERVICE VOID</text>
+    <text x="370" y="80" text-anchor="middle" class="sublabel" style="font-size:9px">(wiring, ventilation)</text>
+    
+    <!-- Dropped ceiling (hinoki cladding) -->
+    <rect x="155" y="120" width="430" height="15" class="dropped-ceiling"/>
+    <text x="370" y="115" text-anchor="middle" class="sublabel" style="font-size:9px">DROPPED CEILING @ 2250mm</text>
+    
+    <!-- Sauna interior walls (hinoki cladding) -->
+    <rect x="155" y="135" width="15" height="215" class="cladding"/>
+    <rect x="570" y="135" width="15" height="215" class="cladding"/>
+    
+    <!-- Floor tiles + duckboards -->
+    <rect x="170" y="335" width="400" height="15" fill="#d1d5db" stroke="#6b7280"/>
+    <rect x="180" y="325" width="380" height="12" fill="#e8d5b7" stroke="#a3865a"/>
+    <text x="370" y="348" text-anchor="middle" class="sublabel" style="font-size:8px">TILE + DUCKBOARDS</text>
+    
+    <!-- BENCHES -->
+    <!-- Left bench (lower tier) -->
+    <rect x="175" y="280" width="55" height="45" class="bench"/>
+    <text x="202" y="305" text-anchor="middle" class="sublabel" style="font-size:8px">BENCH</text>
+    
+    <!-- Left bench backrest -->
+    <rect x="170" y="200" width="12" height="80" class="cladding" transform="rotate(-15, 170, 280)"/>
+    
+    <!-- Right bench (lower tier) -->
+    <rect x="510" y="280" width="55" height="45" class="bench"/>
+    
+    <!-- Right bench backrest -->
+    <rect x="558" y="200" width="12" height="80" class="cladding" transform="rotate(15, 570, 280)"/>
+    
+    <!-- Optional upper bench (right side) -->
+    <rect x="510" y="200" width="55" height="30" class="bench" stroke-dasharray="4,2"/>
+    <text x="537" y="190" text-anchor="middle" class="sublabel" style="font-size:8px">UPPER</text>
+    <text x="537" y="220" text-anchor="middle" class="sublabel" style="font-size:8px">(opt)</text>
+    
+    <!-- Electric heater -->
+    <rect x="250" y="260" width="50" height="65" class="heater" rx="3"/>
+    <text x="275" y="300" text-anchor="middle" style="font-size:10px;fill:white;font-weight:bold">HTR</text>
+    
+    <!-- Ventilation -->
+    <rect x="300" y="310" width="30" height="15" class="vent"/>
+    <text x="315" y="335" text-anchor="middle" class="sublabel" style="font-size:8px">SUPPLY</text>
+    
+    <rect x="450" y="140" width="30" height="15" class="vent"/>
+    <text x="465" y="160" text-anchor="middle" class="sublabel" style="font-size:8px">EXHAUST</text>
+    
+    <!-- Seated person silhouette (scale figure) -->
+    <g transform="translate(520, 195)">
+      <ellipse cx="0" cy="-30" rx="12" ry="15" class="person"/>
+      <path d="M0,-15 L0,40 M-20,85 L0,40 L20,85 M-18,10 L0,0 L18,10" class="person"/>
+      <text x="0" y="-55" text-anchor="middle" class="sublabel" style="font-size:8px">1.7m fig.</text>
+    </g>
+    
+    <!-- Standing person silhouette in vestibule -->
+    <g transform="translate(72, 180)">
+      <ellipse cx="0" cy="0" rx="10" ry="12" class="person"/>
+      <path d="M0,12 L0,80 M-15,165 L0,80 L15,165 M-15,40 L0,30 L15,40" class="person"/>
+    </g>
+    
+    <!-- DIMENSIONS -->
+    <!-- Total height -->
+    <line x1="-40" y1="0" x2="-40" y2="350" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="-55" y="175" text-anchor="middle" class="dimension" transform="rotate(-90, -55, 175)">3500</text>
+    
+    <!-- Dropped ceiling height -->
+    <line x1="650" y1="135" x2="650" y2="350" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="665" y="242" text-anchor="middle" class="dimension" transform="rotate(-90, 665, 242)">2250</text>
+    
+    <!-- Service void height -->
+    <line x1="650" y1="5" x2="650" y2="120" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="665" y="62" text-anchor="middle" class="dimension" transform="rotate(-90, 665, 62)">1150</text>
+    
+    <!-- Bench height -->
+    <line x1="235" y1="280" x2="235" y2="350" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="248" y="318" text-anchor="middle" class="dimension">450</text>
+    
+    <!-- Vestibule width -->
+    <line x1="20" y1="380" x2="125" y2="380" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="72" y="395" text-anchor="middle" class="dimension">1050</text>
+    
+    <!-- Sauna width -->
+    <line x1="140" y1="380" x2="600" y2="380" class="dim-line" marker-start="url(#arrow-rev)" marker-end="url(#arrow)"/>
+    <text x="370" y="395" text-anchor="middle" class="dimension">1900 (net clear)</text>
+    
+    <!-- Wall assembly callout -->
+    <line x1="600" y1="50" x2="680" y2="20" stroke="#374151" stroke-width="1"/>
+    <text x="685" y="15" class="sublabel" style="font-size:9px">WALL ASSEMBLY:</text>
+    <text x="685" y="27" class="sublabel" style="font-size:8px">1. Hinoki cladding</text>
+    <text x="685" y="37" class="sublabel" style="font-size:8px">2. Air gap (battens)</text>
+    <text x="685" y="47" class="sublabel" style="font-size:8px">3. Al foil vapor barrier</text>
+    <text x="685" y="57" class="sublabel" style="font-size:8px">4. Mineral wool 100mm</text>
+    <text x="685" y="67" class="sublabel" style="font-size:8px">5. Structure</text>
+    
+  </g>
+  
+  <!-- Section cut indicator -->
+  <text x="40" y="480" class="label" style="font-size:11px">NOTES:</text>
+  <text x="40" y="492" class="sublabel">• Dropped ceiling critical for thermal efficiency (reduces volume, faster heat-up)</text>
+  
+</svg>
+
