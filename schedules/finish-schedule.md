@@ -1,60 +1,94 @@
-# Finish Schedule
+# Finish Schedule (v4 Update)
 
 ## Room Finishes
 
-### R-01: Vestibule
+### R-01: Bathroom/Sauna 1 (7.85 m²)
 
-| Surface | Finish | Material | Notes |
-|---------|--------|----------|-------|
-| Floor | Tile/Microcement | Non-slip, waterproof | Linear drain, 1% slope |
-| Walls | TBD | Hinoki accent or painted | |
-| Ceiling | TBD | Paint or wood | Full 3.5m height |
-| Base | Tile | Match floor | |
+| Surface | Finish | Material | Area | Notes |
+|---------|--------|----------|------|-------|
+| Floor | Birch solid | wood-solid-birch | 7.94 m² | Waterproof treatment |
+| Walls | White | Painted/finished | 7.85 m² | |
+| Walls | Wood planks | Vertical Wooden Planks | 17.1 m² | Main cladding |
+| Walls | Pattern | Accent pattern | 3.00 m² | |
+| Walls | Wood log | Accent | 1.00 m² | |
+| Ceiling | Wood log | Natural wood | 7.85 m² | |
 
-### R-02: Infrared Sauna
+### R-02: Bathroom/Sauna 2 (4.05 m²)
 
-| Surface | Finish | Material | Notes |
-|---------|--------|----------|-------|
-| Floor | Tile + Duckboards | Non-slip tile, hinoki duckboards | Removable duckboards |
-| Walls | Hinoki T&G | 12-15mm, clear grade | No finish/varnish |
-| Ceiling | Hinoki T&G | 12-15mm | Dropped to 2.2-2.3m |
-| Benches | Hinoki/Abachi | 25-30mm | L-shaped |
-| Backrests | Hinoki/Abachi | 20-25mm | 15-20° recline |
+| Surface | Finish | Material | Area | Notes |
+|---------|--------|----------|------|-------|
+| Floor | Birch solid | wood-solid-birch | 4.14 m² | Waterproof treatment |
+| Walls | White | Painted/finished | 18.7 m² | |
+| Walls | Wood planks | Vertical Wooden Planks | 4.53 m² | Accent cladding |
+| Ceiling | Wood log | Natural wood | 4.05 m² | |
 
-### R-03: Electric Sauna
+### R-03: Vestibule (3.46 m²)
 
-| Surface | Finish | Material | Notes |
-|---------|--------|----------|-------|
-| Floor | Tile + Duckboards | Non-slip tile, hinoki duckboards | Removable duckboards |
-| Walls | Hinoki T&G | 12-15mm, clear grade | No finish/varnish |
-| Ceiling | Hinoki T&G | 12-15mm | Dropped to 2.2-2.3m |
-| Benches | Hinoki/Abachi | 25-30mm | L-shaped + optional upper |
-| Backrests | Hinoki/Abachi | 20-25mm | 15-20° recline |
+| Surface | Finish | Material | Area | Notes |
+|---------|--------|----------|------|-------|
+| Floor | Birch solid | wood-solid-birch | 3.73 m² | Waterproof treatment |
+| Walls | White | Painted/finished | 10.0 m² | |
+| Walls | Wood planks | Vertical Wooden Planks | 3.21 m² | Accent cladding |
+| Ceiling | Wood log | Natural wood | 3.46 m² | |
+
+---
+
+## Material Summary
+
+### Floor Finishes
+
+| Material | Total Area | Unit | Notes |
+|----------|------------|------|-------|
+| wood-solid-birch | 15.81 m² | sqm | Solid birch flooring |
+
+### Wall Finishes
+
+| Material | Total Area | Unit | Notes |
+|----------|------------|------|-------|
+| White (painted) | 36.55 m² | sqm | Smooth finish |
+| Vertical Wooden Planks | 24.84 m² | sqm | Natural wood cladding |
+| Pattern | 3.00 m² | sqm | Decorative accent |
+| Wood log | 1.00 m² | sqm | Accent feature |
+
+### Ceiling Finishes
+
+| Material | Total Area | Unit | Notes |
+|----------|------------|------|-------|
+| Wood log | 15.36 m² | sqm | Natural wood ceiling |
 
 ---
 
 ## Material Specifications
 
-### Hinoki Wood
-- **Species:** Chamaecyparis obtusa (Japanese Hinoki)
-- **Grade:** Clear or select, minimal knots
-- **Finish:** Natural, uncoated — no varnish, lacquer, or sealants
+### Birch Wood (Flooring)
+- **Species:** Solid birch
+- **Application:** All floor areas
+- **Finish:** Waterproof treatment for sauna/wet areas
 - **Moisture content:** 8-12% at installation
 
-### Abachi (Alternative for Benches)
-- **Species:** Triplochiton scleroxylon
-- **Benefits:** Lower surface temperature, softer feel
-- **Finish:** Natural, uncoated
+### Vertical Wooden Planks
+- **Application:** Wall cladding accent
+- **Finish:** Natural, may be sealed for moisture protection
+- **Installation:** Vertical orientation
 
-### Tile
-- **Type:** Porcelain or ceramic
-- **Slip resistance:** R10 minimum (wet areas)
-- **Color:** TBD — coordinate with hinoki tones
+### Wood Log
+- **Application:** Ceilings and accent walls
+- **Finish:** Natural, untreated
+- **Character:** Rustic, natural log appearance
 
-### Glass
-- **Type:** Tempered safety glass
-- **Thickness:** 8-10mm (doors), IGU for window
-- **Tint:** Clear or light bronze (optional)
+### White Finish
+- **Application:** Primary wall surface
+- **Type:** Paint or smooth finish
+- **Moisture:** Use moisture-resistant paint in wet areas
+
+---
+
+## Openings
+
+| Type | Total Area | Quantity | Notes |
+|------|------------|----------|-------|
+| Doors | 5.67 m² | 3 | See door schedule |
+| Windows | 10.82 m² | 2 | Large pool-view glazing |
 
 ---
 
@@ -62,8 +96,13 @@
 
 | Element | Color/Tone | Notes |
 |---------|------------|-------|
-| Hinoki | Natural honey/cream | Darkens slightly with age |
-| Tile | TBD | Neutral, complement wood |
+| Birch flooring | Natural blonde/honey | Warm undertones |
+| Wood log | Natural medium brown | Ceiling character |
+| Wooden planks | Natural wood | Vertical accent |
+| White walls | Clean white | Primary background |
 | Hardware | Brushed stainless | Throughout |
-| Glass | Clear/Bronze | Per door and window |
+| Glass | Clear | Windows and doors |
 
+---
+
+*Source: Room Planner App (sauna v4.pdf)*
