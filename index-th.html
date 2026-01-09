@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Levara Sauna Suite — Pool-View Dual Sauna</title>
+    <title>เลวารา ซาวน่า — ซาวน่าวิวสระว่ายน้ำ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #1a1512;
@@ -30,10 +30,10 @@
         }
 
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Noto Sans Thai', 'Outfit', sans-serif;
             background: var(--bg-dark);
             color: var(--text-light);
-            line-height: 1.6;
+            line-height: 1.8;
             font-weight: 300;
         }
 
@@ -85,11 +85,10 @@
         }
 
         .hero .subtitle {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Noto Sans Thai', sans-serif;
             font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-weight: 300;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 0.1em;
             color: var(--accent-copper);
             margin-bottom: 2rem;
         }
@@ -113,7 +112,6 @@
             color: var(--text-muted);
             font-size: 0.75rem;
             letter-spacing: 0.2em;
-            text-transform: uppercase;
             animation: float 2s ease-in-out infinite;
         }
 
@@ -152,16 +150,15 @@
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            font-size: 0.9rem;
             transition: color 0.3s ease;
         }
 
@@ -171,14 +168,18 @@
 
         .lang-switch {
             background: var(--accent-copper);
-            color: var(--bg-dark) !important;
+            color: var(--bg-dark);
             padding: 0.4rem 0.8rem;
             border-radius: 4px;
+            font-size: 0.85rem;
             font-weight: 500;
+            text-decoration: none;
+            transition: background 0.3s ease;
         }
 
         .lang-switch:hover {
             background: var(--accent-gold);
+            color: var(--bg-dark);
         }
 
         /* Sections */
@@ -194,10 +195,9 @@
         }
 
         .section-header h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 300;
-            letter-spacing: 0.05em;
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 400;
             margin-bottom: 1rem;
         }
 
@@ -235,9 +235,9 @@
         }
 
         .spec-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 500;
             color: var(--accent-gold);
             margin-bottom: 1rem;
         }
@@ -309,9 +309,9 @@
         }
 
         .room-content h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 400;
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
             margin-bottom: 0.5rem;
         }
 
@@ -362,14 +362,14 @@
         }
 
         .material-sample::after {
-            content: 'HINOKI';
+            content: 'ไม้ซาวน่า';
             position: absolute;
             bottom: 1.5rem;
             left: 1.5rem;
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Noto Sans Thai', sans-serif;
             font-size: 1.5rem;
             color: rgba(26,21,18,0.5);
-            letter-spacing: 0.2em;
+            letter-spacing: 0.1em;
         }
 
         .material-details {
@@ -378,9 +378,9 @@
         }
 
         .material-details h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 400;
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
             margin-bottom: 1rem;
         }
 
@@ -442,13 +442,11 @@
         }
 
         .stat-label {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
         }
 
-        /* Glass Cost Section */
+        /* Cost Section */
         .cost-comparison {
             background: linear-gradient(145deg, var(--bg-warm) 0%, rgba(45,36,32,0.5) 100%);
             border: 1px solid rgba(193,127,89,0.2);
@@ -473,9 +471,7 @@
         .cost-table th {
             color: var(--accent-copper);
             font-weight: 400;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
+            font-size: 0.85rem;
         }
 
         .cost-table td {
@@ -497,8 +493,6 @@
             padding: 0.2rem 0.6rem;
             border-radius: 4px;
             font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
             margin-left: 0.5rem;
         }
 
@@ -526,6 +520,10 @@
             }
 
             .nav-links {
+                gap: 1rem;
+            }
+
+            .nav-links li:not(:last-child):not(:nth-last-child(2)) {
                 display: none;
             }
 
@@ -543,23 +541,23 @@
     <nav>
         <div class="logo">LEVARA</div>
         <ul class="nav-links">
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#rooms">Rooms</a></li>
-            <li><a href="#materials">Materials</a></li>
-            <li><a href="#specs">Specifications</a></li>
-            <li><a href="docs.html">Documents</a></li>
-            <li><a href="index-th.html" class="lang-switch">ไทย</a></li>
+            <li><a href="#overview">ภาพรวม</a></li>
+            <li><a href="#rooms">ห้อง</a></li>
+            <li><a href="#materials">วัสดุ</a></li>
+            <li><a href="#specs">ข้อมูลจำเพาะ</a></li>
+            <li><a href="docs-th.html">เอกสาร</a></li>
+            <li><a href="index.html" class="lang-switch">English</a></li>
         </ul>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
             <h1>Levara Sauna</h1>
-            <p class="subtitle">Pool-View Dual Suite</p>
-            <p>A luxury three-room wellness retreat featuring traditional electric and infrared saunas with dramatic pool-view floor glazing, crafted in authentic Japanese Hinoki wood.</p>
+            <p class="subtitle">ซาวน่าสองห้องวิวสระว่ายน้ำ</p>
+            <p>รีสอร์ทเพื่อสุขภาพสามห้องสุดหรู พร้อมซาวน่าไฟฟ้าและอินฟราเรดแบบดั้งเดิม พร้อมกระจกพื้นวิวสระว่ายน้ำที่งดงาม สร้างด้วยไม้ฮิโนกิญี่ปุ่นแท้</p>
         </div>
         <div class="scroll-indicator">
-            <span>Explore</span>
+            <span>สำรวจ</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 5v14M5 12l7 7 7-7"/>
             </svg>
@@ -568,33 +566,33 @@
 
     <section id="overview">
         <div class="section-header">
-            <h2>Project Overview</h2>
+            <h2>ภาพรวมโครงการ</h2>
             <div class="divider"></div>
-            <p>A meticulously designed sauna suite within a compact footprint, maximizing wellness experience and visual connection to the outdoors.</p>
+            <p>ห้องซาวน่าที่ออกแบบอย่างพิถีพิถันในพื้นที่ขนาดกะทัดรัด เพิ่มประสบการณ์สุขภาพและการเชื่อมต่อทางสายตากับธรรมชาติภายนอก</p>
         </div>
 
         <div class="floorplan-container">
-            <img src="floor-plans/IMG_0267.jpg" alt="Floor Plan Render" class="floorplan-image" onerror="this.style.display='none'">
+            <img src="floor-plans/IMG_0267.jpg" alt="แบบผังพื้น" class="floorplan-image" onerror="this.style.display='none'">
             <div class="floorplan-stats">
                 <div class="stat">
                     <div class="stat-value">5.7×4.0</div>
-                    <div class="stat-label">Envelope (m)</div>
+                    <div class="stat-label">ขนาดภายนอก (ม.)</div>
                 </div>
                 <div class="stat">
                     <div class="stat-value">21.4</div>
-                    <div class="stat-label">Gross Area (m²)</div>
+                    <div class="stat-label">พื้นที่รวม (ตร.ม.)</div>
                 </div>
                 <div class="stat">
                     <div class="stat-value">46.1</div>
-                    <div class="stat-label">Volume (m³)</div>
+                    <div class="stat-label">ปริมาตร (ลบ.ม.)</div>
                 </div>
                 <div class="stat">
                     <div class="stat-value">3</div>
-                    <div class="stat-label">Rooms</div>
+                    <div class="stat-label">ห้อง</div>
                 </div>
                 <div class="stat">
                     <div class="stat-value">฿285,893</div>
-                    <div class="stat-label">Est. Cost</div>
+                    <div class="stat-label">ราคาประมาณ</div>
                 </div>
             </div>
         </div>
@@ -602,9 +600,9 @@
 
     <section id="rooms">
         <div class="section-header">
-            <h2>The Suite</h2>
+            <h2>ห้องทั้งหมด</h2>
             <div class="divider"></div>
-            <p>Three interconnected spaces designed for the complete thermal wellness journey.</p>
+            <p>พื้นที่สามส่วนที่เชื่อมต่อกันสำหรับประสบการณ์สุขภาพแบบครบวงจร</p>
         </div>
 
         <div class="rooms-container">
@@ -613,9 +611,9 @@
                     <span class="room-icon">🔥</span>
                 </div>
                 <div class="room-content">
-                    <h3>Bathroom/Sauna 1</h3>
-                    <span class="room-temp">7.85 m² • 23.6 m³</span>
-                    <p>Main sauna space (2.62m × 3.00m) with Solzaima radiator, wood log ceiling, vertical wooden plank walls, and large 5.89 m² window for pool views.</p>
+                    <h3>ห้องน้ำ/ซาวน่า 1</h3>
+                    <span class="room-temp">7.85 ตร.ม. • 23.6 ลบ.ม.</span>
+                    <p>พื้นที่ซาวน่าหลัก (2.62 ม. × 3.00 ม.) พร้อมเครื่องทำความร้อน Solzaima เพดานไม้ท่อน ผนังไม้ระแนงแนวตั้ง และหน้าต่างขนาด 5.89 ตร.ม. สำหรับวิวสระว่ายน้ำ</p>
                 </div>
             </div>
 
@@ -624,9 +622,9 @@
                     <span class="room-icon">☀️</span>
                 </div>
                 <div class="room-content">
-                    <h3>Bathroom/Sauna 2</h3>
-                    <span class="room-temp">4.05 m² • 12.1 m³</span>
-                    <p>Compact sauna room (2.68m × 1.51m) with Solzaima radiator, dual LED panels, birch flooring, and white walls with wood plank accents.</p>
+                    <h3>ห้องน้ำ/ซาวน่า 2</h3>
+                    <span class="room-temp">4.05 ตร.ม. • 12.1 ลบ.ม.</span>
+                    <p>ห้องซาวน่าขนาดกะทัดรัด (2.68 ม. × 1.51 ม.) พร้อมเครื่องทำความร้อน Solzaima แผง LED คู่ พื้นไม้เบิร์ช และผนังสีขาวพร้อมไม้ระแนงตกแต่ง</p>
                 </div>
             </div>
 
@@ -635,9 +633,9 @@
                     <span class="room-icon">❄️</span>
                 </div>
                 <div class="room-content">
-                    <h3>Vestibule</h3>
-                    <span class="room-temp">3.46 m² • 10.4 m³</span>
-                    <p>Transition space (2.68m × 1.29m) connecting all rooms. Features 3 doors, 4.93 m² window, and houses central controls.</p>
+                    <h3>ห้องโถง</h3>
+                    <span class="room-temp">3.46 ตร.ม. • 10.4 ลบ.ม.</span>
+                    <p>พื้นที่เปลี่ยนผ่าน (2.68 ม. × 1.29 ม.) เชื่อมต่อทุกห้อง มีประตู 3 บาน หน้าต่าง 4.93 ตร.ม. และศูนย์ควบคุมกลาง</p>
                 </div>
             </div>
         </div>
@@ -645,38 +643,39 @@
 
     <section id="materials">
         <div class="section-header">
-            <h2>Sauna Construction Materials</h2>
+            <h2>วัสดุก่อสร้างซาวน่า</h2>
             <div class="divider"></div>
-            <p>Traditional sauna construction with engineered wood structure, glass wool insulation, aluminum vapor barrier, and premium wood lining.</p>
+            <p>การก่อสร้างซาวน่าแบบดั้งเดิมด้วยโครงสร้างไม้วิศวกรรม ฉนวนใยแก้ว แผ่นกันความชื้นอลูมิเนียม และไม้บุผนังระดับพรีเมียม</p>
         </div>
 
         <div class="specs-grid" style="margin-bottom: 3rem;">
             <div class="spec-card">
-                <h3>Structure & Backing</h3>
+                <h3>โครงสร้างและแผ่นรอง</h3>
                 <ul>
-                    <li><strong>Plywood:</strong> Exterior/WBP-grade</li>
-                    <li>Supplier: <a href="https://www.metroply.com/plywood" target="_blank" style="color: var(--accent-copper);">METROPLY</a></li>
-                    <li><strong>OSB:</strong> Oriented Strand Board</li>
-                    <li>Supplier: <a href="https://www.vanachai.com/" target="_blank" style="color: var(--accent-copper);">Vanachai Group</a></li>
+                    <li><strong>ไม้อัดกันน้ำ:</strong> WBP-grade</li>
+                    <li>ซื้อที่: <a href="https://www.homepro.co.th/c/Lumber-Wood-Plywood" target="_blank" style="color: var(--accent-copper);">HomePro</a></li>
+                    <li><strong>ไม้อัด OSB:</strong> Oriented Strand Board</li>
+                    <li>ซื้อที่: <a href="https://www.thaiwatsadu.com" target="_blank" style="color: var(--accent-copper);">Thai Watsadu</a></li>
+                    <li>ซื้อที่: <a href="https://www.globalhouse.co.th" target="_blank" style="color: var(--accent-copper);">Global House</a></li>
                 </ul>
             </div>
 
             <div class="spec-card">
-                <h3>Framing & Insulation</h3>
+                <h3>โครงสร้างและฉนวน</h3>
                 <ul>
-                    <li><strong>Studs:</strong> Kiln-dried timber</li>
-                    <li>Supplier: <a href="https://www.thaweephanwood.com/" target="_blank" style="color: var(--accent-copper);">Thaweephan</a></li>
-                    <li><strong>Insulation:</strong> Glass mineral wool</li>
-                    <li>Supplier: <a href="https://www.knaufinsulation.com/what-we-do/insulation-range/glass-mineral-wool" target="_blank" style="color: var(--accent-copper);">Knauf Insulation</a></li>
+                    <li><strong>ไม้โครง:</strong> ไม้อบแห้ง</li>
+                    <li>ซื้อที่: <a href="https://www.homepro.co.th/c/Lumber-Wood" target="_blank" style="color: var(--accent-copper);">HomePro ไม้ก่อสร้าง</a></li>
+                    <li><strong>ฉนวน:</strong> ใยแก้วกันความร้อน</li>
+                    <li>ซื้อที่: <a href="https://www.scgbuildingmaterials.com" target="_blank" style="color: var(--accent-copper);">SCG ฉนวน</a></li>
                 </ul>
             </div>
 
             <div class="spec-card">
-                <h3>Vapor Barrier</h3>
+                <h3>แผ่นกันความชื้น</h3>
                 <ul>
-                    <li><strong>Type:</strong> Aluminum foil sauna barrier</li>
-                    <li>Option 1: <a href="https://sunvalleysaunas.com/products/steam-sauna-living-vapor-barrier" target="_blank" style="color: var(--accent-copper);">Sun Valley Saunas</a></li>
-                    <li>Option 2: <a href="https://www.oceanicsaunas.com/product/vapour-barrier-paper/" target="_blank" style="color: var(--accent-copper);">Oceanic Saunas</a> (Finland)</li>
+                    <li><strong>ชนิด:</strong> อลูมิเนียมฟอยล์สำหรับซาวน่า</li>
+                    <li>ซื้อที่: <a href="https://www.lazada.co.th" target="_blank" style="color: var(--accent-copper);">Lazada</a> (ค้นหา: aluminum foil sauna)</li>
+                    <li>ซื้อที่: <a href="https://www.shopee.co.th" target="_blank" style="color: var(--accent-copper);">Shopee</a> (ค้นหา: vapor barrier sauna)</li>
                 </ul>
             </div>
         </div>
@@ -684,107 +683,107 @@
         <div class="materials-showcase">
             <div class="material-sample"></div>
             <div class="material-details">
-                <h3>Interior Wood Lining</h3>
-                <p>Premium wood species for walls, ceiling, and benches. Each species offers unique properties for traditional sauna environments.</p>
+                <h3>ไม้บุผนังภายใน</h3>
+                <p>ไม้คุณภาพสูงสำหรับผนัง เพดาน และม้านั่ง แต่ละชนิดมีคุณสมบัติพิเศษสำหรับสภาพแวดล้อมซาวน่าแบบดั้งเดิม</p>
                 <div class="material-features">
-                    <div class="feature"><a href="https://www.j-wood.org/en/tree-species/hinoki/" target="_blank" style="color: var(--text-light);">Hinoki (Japanese Cypress)</a></div>
-                    <div class="feature"><a href="https://www.wood-database.com/western-red-cedar/" target="_blank" style="color: var(--text-light);">Western Red Cedar</a></div>
-                    <div class="feature"><a href="https://www.wood-database.com/european-aspen/" target="_blank" style="color: var(--text-light);">Aspen</a></div>
-                    <div class="feature"><a href="https://www.wood-database.com/norway-spruce/" target="_blank" style="color: var(--text-light);">Nordic Spruce</a></div>
-                    <div class="feature"><a href="https://www.thermowood.fi/" target="_blank" style="color: var(--text-light);">ThermoWood</a></div>
+                    <div class="feature">ฮิโนกิ (สนญี่ปุ่น)</div>
+                    <div class="feature">ซีดาร์แดงตะวันตก</div>
+                    <div class="feature">ไม้แอสเพน</div>
+                    <div class="feature">ไม้สปรูซนอร์ดิก</div>
+                    <div class="feature">ไม้เทอร์โมวูด</div>
                 </div>
-                <p style="margin-top: 1.5rem;"><a href="specifications/sauna-materials-spec.pdf" class="badge" style="text-decoration: none; padding: 0.5rem 1rem;">Download Full Spec (PDF)</a></p>
+                <p style="margin-top: 1.5rem;"><a href="specifications/sauna-materials-spec.pdf" class="badge" style="text-decoration: none; padding: 0.5rem 1rem;">ดาวน์โหลดข้อมูลจำเพาะ (PDF)</a></p>
             </div>
         </div>
     </section>
 
     <section id="specs">
         <div class="section-header">
-            <h2>Technical Specifications</h2>
+            <h2>ข้อมูลจำเพาะทางเทคนิค</h2>
             <div class="divider"></div>
         </div>
 
         <div class="specs-grid">
             <div class="spec-card">
-                <h3>Dimensions</h3>
+                <h3>ขนาด</h3>
                 <ul>
-                    <li><strong>Envelope:</strong> 5.70m × 4.00m</li>
-                    <li><strong>Volume:</strong> 46.1 m³</li>
-                    <li><strong>Living Area:</strong> 13.9 m²</li>
-                    <li><strong>Gross Area:</strong> 21.4 m²</li>
-                    <li><strong>Ceiling Height:</strong> 3.00m</li>
+                    <li><strong>ขนาดภายนอก:</strong> 5.70 ม. × 4.00 ม.</li>
+                    <li><strong>ปริมาตร:</strong> 46.1 ลบ.ม.</li>
+                    <li><strong>พื้นที่ใช้สอย:</strong> 13.9 ตร.ม.</li>
+                    <li><strong>พื้นที่รวม:</strong> 21.4 ตร.ม.</li>
+                    <li><strong>ความสูงเพดาน:</strong> 3.00 ม.</li>
                 </ul>
             </div>
 
             <div class="spec-card">
-                <h3>Heating Systems</h3>
+                <h3>ระบบทำความร้อน</h3>
                 <ul>
-                    <li><strong>Type:</strong> Solzaima Radiator (×3)</li>
-                    <li><strong>Size:</strong> 93.3 × 87.7 cm each</li>
-                    <li><strong>Cost:</strong> ฿94,099 each</li>
-                    <li><strong>Total Heaters:</strong> ฿282,297</li>
+                    <li><strong>ชนิด:</strong> Solzaima Radiator (×3)</li>
+                    <li><strong>ขนาด:</strong> 93.3 × 87.7 ซม. ต่อเครื่อง</li>
+                    <li><strong>ราคา:</strong> ฿94,099 ต่อเครื่อง</li>
+                    <li><strong>รวมเครื่องทำความร้อน:</strong> ฿282,297</li>
                 </ul>
             </div>
 
             <div class="spec-card">
-                <h3>Materials</h3>
+                <h3>วัสดุ</h3>
                 <ul>
-                    <li><strong>Flooring:</strong> Birch solid wood (15.8 m²)</li>
-                    <li><strong>Ceiling:</strong> Wood log (15.4 m²)</li>
-                    <li><strong>Walls:</strong> Vertical wood planks (24.8 m²)</li>
-                    <li><strong>Walls:</strong> White finish (36.6 m²)</li>
-                    <li><strong>Windows:</strong> 10.8 m² total</li>
+                    <li><strong>พื้น:</strong> ไม้เบิร์ชแข็ง (15.8 ตร.ม.)</li>
+                    <li><strong>เพดาน:</strong> ไม้ท่อน (15.4 ตร.ม.)</li>
+                    <li><strong>ผนัง:</strong> ไม้ระแนงแนวตั้ง (24.8 ตร.ม.)</li>
+                    <li><strong>ผนัง:</strong> สีขาว (36.6 ตร.ม.)</li>
+                    <li><strong>หน้าต่าง:</strong> รวม 10.8 ตร.ม.</li>
                 </ul>
             </div>
 
             <div class="spec-card">
-                <h3>Lighting</h3>
+                <h3>ไฟส่องสว่าง</h3>
                 <ul>
-                    <li><strong>Type:</strong> Amazon LED Panel</li>
-                    <li><strong>Size:</strong> 59.4 × 59.2 cm</li>
-                    <li><strong>Quantity:</strong> 4 panels total</li>
-                    <li><strong>Total Cost:</strong> ฿3,596</li>
+                    <li><strong>ชนิด:</strong> Amazon LED Panel</li>
+                    <li><strong>ขนาด:</strong> 59.4 × 59.2 ซม.</li>
+                    <li><strong>จำนวน:</strong> 4 แผง</li>
+                    <li><strong>ราคารวม:</strong> ฿3,596</li>
                 </ul>
             </div>
         </div>
 
         <div class="cost-comparison">
-            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 0.5rem;">Project Cost Summary</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Based on Room Planner v4 estimates — Thailand market</p>
+            <h3 style="font-family: 'Noto Sans Thai', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem;">สรุปค่าใช้จ่ายโครงการ</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">ตามการประมาณการจาก Room Planner v4 — ราคาตลาดประเทศไทย</p>
             
             <table class="cost-table">
                 <thead>
                     <tr>
-                        <th>Room</th>
-                        <th>Furniture & Decor</th>
-                        <th>Area</th>
-                        <th>Notes</th>
+                        <th>ห้อง</th>
+                        <th>เฟอร์นิเจอร์และตกแต่ง</th>
+                        <th>พื้นที่</th>
+                        <th>หมายเหตุ</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Bathroom/Sauna 1</td>
+                        <td>ห้องน้ำ/ซาวน่า 1</td>
                         <td>฿94,998</td>
-                        <td>7.85 m²</td>
-                        <td>Solzaima + LED panel</td>
+                        <td>7.85 ตร.ม.</td>
+                        <td>Solzaima + แผง LED</td>
                     </tr>
                     <tr>
-                        <td>Bathroom/Sauna 2</td>
+                        <td>ห้องน้ำ/ซาวน่า 2</td>
                         <td>฿95,897</td>
-                        <td>4.05 m²</td>
-                        <td>Solzaima + 2× LED panels</td>
+                        <td>4.05 ตร.ม.</td>
+                        <td>Solzaima + 2× แผง LED</td>
                     </tr>
                     <tr>
-                        <td>Vestibule</td>
+                        <td>ห้องโถง</td>
                         <td>฿94,998</td>
-                        <td>3.46 m²</td>
-                        <td>Solzaima + LED panel</td>
+                        <td>3.46 ตร.ม.</td>
+                        <td>Solzaima + แผง LED</td>
                     </tr>
                     <tr class="recommended">
-                        <td>Total <span class="badge">v4 Estimate</span></td>
+                        <td>รวมทั้งหมด <span class="badge">ประมาณการ v4</span></td>
                         <td>฿285,893</td>
-                        <td>15.36 m²</td>
-                        <td>Excl. flooring & walls</td>
+                        <td>15.36 ตร.ม.</td>
+                        <td>ไม่รวมพื้นและผนัง</td>
                     </tr>
                 </tbody>
             </table>
@@ -793,9 +792,8 @@
 
     <footer>
         <div class="logo">LEVARA SAUNA</div>
-        <p>Pool-View Dual Sauna Suite — Design Documentation</p>
-        <p style="margin-top: 1rem; opacity: 0.6;">© 2025 Levara Project</p>
+        <p>ซาวน่าสองห้องวิวสระว่ายน้ำ — เอกสารออกแบบ</p>
+        <p style="margin-top: 1rem; opacity: 0.6;">© 2025 โครงการเลวารา</p>
     </footer>
 </body>
 </html>
-

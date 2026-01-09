@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เอกสารออกแบบ — เลวารา ซาวน่า</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #1a1512;
+            --bg-warm: #2d2420;
+            --accent-copper: #c17f59;
+            --accent-gold: #d4a574;
+            --text-light: #f5f0eb;
+            --text-muted: #a89a8c;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans Thai', 'Outfit', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+            font-weight: 300;
+            min-height: 100vh;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(26,21,18,0.95);
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--accent-copper); }
+        .lang-switch {
+            background: var(--accent-copper);
+            color: var(--bg-dark) !important;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .lang-switch:hover {
+            background: var(--accent-gold);
+        }
+        
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        h1 {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(193,127,89,0.3);
+        }
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        .doc-card {
+            background: var(--bg-warm);
+            border: 1px solid rgba(193,127,89,0.2);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .doc-card:hover {
+            border-color: var(--accent-copper);
+            transform: translateY(-2px);
+        }
+        .doc-card h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        .doc-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .doc-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .doc-links a {
+            font-size: 0.8rem;
+            color: var(--accent-copper);
+            text-decoration: none;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid var(--accent-copper);
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .doc-links a:hover {
+            background: var(--accent-copper);
+            color: var(--bg-dark);
+        }
+        .doc-links a.primary {
+            background: var(--accent-copper);
+            color: var(--bg-dark);
+        }
+        .doc-links a.primary:hover {
+            background: var(--accent-gold);
+        }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index-th.html" class="logo">LEVARA</a>
+        <ul class="nav-links">
+            <li><a href="index-th.html">หน้าหลัก</a></li>
+            <li><a href="docs-th.html">เอกสาร</a></li>
+            <li><a href="docs.html" class="lang-switch">English</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>เอกสารออกแบบ</h1>
+        <p class="subtitle">เอกสารโครงการทั้งหมดสำหรับซาวน่าสองห้องวิวสระว่ายน้ำ</p>
+
+        <div class="section">
+            <h2>ภาพรวมโครงการ</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <h3>ข้อกำหนดการออกแบบ v1.0</h3>
+                    <p>ข้อกำหนดและความต้องการโครงการทั้งหมด</p>
+                    <div class="doc-links">
+                        <a href="pool-view-dual-sauna-suite-design-specs.md" class="primary">ดู</a>
+                        <a href="pool-view-dual-sauna-suite-design-specs.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>เกณฑ์การตรวจรับ</h3>
+                    <p>ข้อกำหนดการตรวจสอบประสิทธิภาพ</p>
+                    <div class="doc-links">
+                        <a href="acceptance-criteria.md" class="primary">ดู</a>
+                        <a href="acceptance-criteria.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>รายการตรวจสอบการส่งมอบ</h3>
+                    <p>การติดตามงานส่งมอบของผู้รับเหมา</p>
+                    <div class="doc-links">
+                        <a href="deliverables-checklist.md" class="primary">ดู</a>
+                        <a href="deliverables-checklist.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>แบบก่อสร้าง</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <h3>แบบผังพื้น</h3>
+                    <p>แบบเลย์เอาต์พร้อมขนาดและการจัดห้อง</p>
+                    <div class="doc-links">
+                        <a href="drawings/floor-plan-draft.svg" class="primary">ดู</a>
+                        <a href="drawings/floor-plan-draft.svg" download>ดาวน์โหลด SVG</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>รูปตัด A-A</h3>
+                    <p>รูปตัดขวางผ่านซาวน่าไฟฟ้า</p>
+                    <div class="doc-links">
+                        <a href="drawings/section-AA-draft.svg" class="primary">ดู</a>
+                        <a href="drawings/section-AA-draft.svg" download>ดาวน์โหลด SVG</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>รูปด้านภายใน</h3>
+                    <p>มุมมองผนังพร้อมม้านั่งและเครื่องทำความร้อน</p>
+                    <div class="doc-links">
+                        <a href="drawings/interior-elevation-draft.svg" class="primary">ดู</a>
+                        <a href="drawings/interior-elevation-draft.svg" download>ดาวน์โหลด SVG</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ภาพ Isometric</h3>
+                    <p>ภาพ 3 มิติของห้องชุด</p>
+                    <div class="doc-links">
+                        <a href="drawings/isometric-concept.svg" class="primary">ดู</a>
+                        <a href="drawings/isometric-concept.svg" download>ดาวน์โหลด SVG</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ภาพ Render จาก Figma</h3>
+                    <p>แบบผังพื้น 3 มิติจาก Figma</p>
+                    <div class="doc-links">
+                        <a href="floor-plans/IMG_0267.jpg" class="primary">ดู</a>
+                        <a href="floor-plans/IMG_0267.jpg" download>ดาวน์โหลด JPG</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ซาวน่า v4 (Room Planner)</h3>
+                    <p>แบบผังพื้นล่าสุดพร้อมขนาดและรายการซื้อ</p>
+                    <div class="doc-links">
+                        <a href="drawings/sauna%20v4.pdf" class="primary">ดู PDF</a>
+                        <a href="drawings/sauna%20v4.pdf" download>ดาวน์โหลด PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>ข้อกำหนดวัสดุ</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <h3>ข้อกำหนดวัสดุซาวน่า</h3>
+                    <p>รายการวัสดุทั้งหมดพร้อมลิงก์ร้านค้าไทย</p>
+                    <div class="doc-links">
+                        <a href="specifications/sauna-materials-spec.pdf" class="primary">ดู PDF</a>
+                        <a href="specifications/sauna-materials-spec.pdf" download>ดาวน์โหลด PDF</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ไม้ฮิโนกิ</h3>
+                    <p>ข้อกำหนดชนิดไม้และการตกแต่ง</p>
+                    <div class="doc-links">
+                        <a href="specifications/hinoki-wood-spec.md" class="primary">ดู</a>
+                        <a href="specifications/hinoki-wood-spec.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>โครงสร้างผนัง</h3>
+                    <p>รายละเอียดฉนวนและแผ่นกันความชื้น</p>
+                    <div class="doc-links">
+                        <a href="specifications/wall-assembly-spec.md" class="primary">ดู</a>
+                        <a href="specifications/wall-assembly-spec.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ระบบระบายอากาศ</h3>
+                    <p>ข้อกำหนดการไหลเวียนอากาศแต่ละห้อง</p>
+                    <div class="doc-links">
+                        <a href="specifications/ventilation-spec.md" class="primary">ดู</a>
+                        <a href="specifications/ventilation-spec.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ระบบไฟฟ้า</h3>
+                    <p>ไฟฟ้า ระบบควบคุม และแสงสว่าง</p>
+                    <div class="doc-links">
+                        <a href="specifications/electrical-spec.md" class="primary">ดู</a>
+                        <a href="specifications/electrical-spec.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ประตู</h3>
+                    <p>ข้อกำหนดประตูซาวน่า</p>
+                    <div class="doc-links">
+                        <a href="specifications/door-spec.md" class="primary">ดู</a>
+                        <a href="specifications/door-spec.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>พื้น</h3>
+                    <p>วัสดุพื้นและระบบระบายน้ำ</p>
+                    <div class="doc-links">
+                        <a href="specifications/floor-spec.md" class="primary">ดู</a>
+                        <a href="specifications/floor-spec.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>หน้าต่าง / กระจก</h3>
+                    <p>ข้อกำหนดกระจกพื้นวิวสระว่ายน้ำ</p>
+                    <div class="doc-links">
+                        <a href="specifications/window-spec.md" class="primary">ดู</a>
+                        <a href="specifications/window-spec.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>ตารางรายการ</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <h3>ตารางห้อง</h3>
+                    <p>ขนาดห้องและคุณสมบัติ</p>
+                    <div class="doc-links">
+                        <a href="schedules/room-schedule.md" class="primary">ดู</a>
+                        <a href="schedules/room-schedule.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ตารางวัสดุ</h3>
+                    <p>วัสดุทั้งหมดพร้อมปริมาณ</p>
+                    <div class="doc-links">
+                        <a href="schedules/material-schedule.md" class="primary">ดู</a>
+                        <a href="schedules/material-schedule.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ตารางอุปกรณ์</h3>
+                    <p>เครื่องทำความร้อน ระบบควบคุม ระบายอากาศ</p>
+                    <div class="doc-links">
+                        <a href="schedules/equipment-schedule.md" class="primary">ดู</a>
+                        <a href="schedules/equipment-schedule.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ตารางประตู</h3>
+                    <p>ชนิดประตูและอุปกรณ์</p>
+                    <div class="doc-links">
+                        <a href="schedules/door-schedule.md" class="primary">ดู</a>
+                        <a href="schedules/door-schedule.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>ตารางวัสดุตกแต่ง</h3>
+                    <p>วัสดุตกแต่งพื้นผิวแต่ละห้อง</p>
+                    <div class="doc-links">
+                        <a href="schedules/finish-schedule.md" class="primary">ดู</a>
+                        <a href="schedules/finish-schedule.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>การคำนวณ</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <h3>การคำนวณขนาดเครื่องทำความร้อน</h3>
+                    <p>การคำนวณกำลังไฟสำหรับซาวน่าทั้งสองห้อง</p>
+                    <div class="doc-links">
+                        <a href="calculations/heater-sizing.md" class="primary">ดู</a>
+                        <a href="calculations/heater-sizing.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>เปรียบเทียบราคากระจก</h3>
+                    <p>ราคากระจกอากาศ vs อาร์กอน (ตลาดไทย)</p>
+                    <div class="doc-links">
+                        <a href="calculations/glass-cost-comparison.md" class="primary">ดู</a>
+                        <a href="calculations/glass-cost-comparison.md" download>ดาวน์โหลด</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>ร้านค้าวัสดุก่อสร้างในไทย</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <h3>HomePro</h3>
+                    <p>วัสดุก่อสร้างครบวงจร</p>
+                    <div class="doc-links">
+                        <a href="https://www.homepro.co.th" target="_blank" class="primary">เปิดเว็บไซต์</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>Thai Watsadu</h3>
+                    <p>วัสดุก่อสร้างราคาประหยัด</p>
+                    <div class="doc-links">
+                        <a href="https://www.thaiwatsadu.com" target="_blank" class="primary">เปิดเว็บไซต์</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>Global House</h3>
+                    <p>วัสดุก่อสร้างทั่วประเทศ</p>
+                    <div class="doc-links">
+                        <a href="https://www.globalhouse.co.th" target="_blank" class="primary">เปิดเว็บไซต์</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>SCG Building Materials</h3>
+                    <p>ฉนวนและวัสดุก่อสร้าง</p>
+                    <div class="doc-links">
+                        <a href="https://www.scgbuildingmaterials.com" target="_blank" class="primary">เปิดเว็บไซต์</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>Lazada Thailand</h3>
+                    <p>อุปกรณ์ซาวน่านำเข้า</p>
+                    <div class="doc-links">
+                        <a href="https://www.lazada.co.th" target="_blank" class="primary">เปิดเว็บไซต์</a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>Shopee Thailand</h3>
+                    <p>อุปกรณ์ซาวน่านำเข้า</p>
+                    <div class="doc-links">
+                        <a href="https://www.shopee.co.th" target="_blank" class="primary">เปิดเว็บไซต์</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>เลวารา ซาวน่า — โครงการซาวน่าสองห้องวิวสระว่ายน้ำ</p>
+        <p style="margin-top: 0.5rem; opacity: 0.6;">© 2568 โครงการเลวารา</p>
+    </footer>
+</body>
+</html>
